@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentation Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <style>
+    body{
+      background-image: url('/static/images/sundown-2-1380418.webp');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+video {
+    max-width: 100%;
+}
+
+.main-container
+ /*{
+  width: 100%;
+  height : 60%;
+  background-color: #202541;
+  padding-bottom: 4%;
+  border-radius: 25px;
+  transition: transform 0.3s; /* Add transition for hover effect */
+ /* box-shadow: 0 0 25px white;
+}*/
+{
+min-width: 30px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background : #202541;
+  background: linear-gradient(180deg,white 0%, white  );
+  border: 1px solid white;
+    border-radius: 30px;
+    overflow: hidden;
+    /* box-shadow: 12px 12px 24px #202541; */
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline:#313133;
+    position: relative;
+    padding: 15px;
+    }
+/* .main-container:hover {
+  transform: scale(1.02);
+  background: pink;
+  color: grey; 
+}*/
+
+.container{
+    display: flex;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    
+}
+
+/* Add a gap between video frame and slides */
+.video-frame {
+    margin-bottom: 70px; /* Reduce the margin */
+    margin-top: 20px; /* Adjust the margin as needed */
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+/* Reduce gap between main container and video frame */
+.main-container .video-frame {
+    margin-top: 700px; /* Adjust the margin as needed */
+}
+/* Add a custom CSS class to style the buttons */
+.custom-button {
+            background-color: #202541; /* Set the background color to grey */
+            color: white; /* Set the text color to white */
+        }
+        
+  .carousel {
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow: hidden; /* To hide the overflowing corners */
+  }
+</style>
+
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-black">
+    <div class="container-fluid">
+        <!-- Use the custom CSS class for the buttons -->
+        <button class="navbar-brand btn btn-link custom-button" onclick="window.location.href='index2.html';">Home</button>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item navbar-brand">
+                <!-- Use the custom CSS class for the buttons -->
+                <button class="navbar-brand btn btn-link custom-button" aria-current="page" onclick="window.location.href='detection2.html';">Detection</button>
+            </li>
+            <li class="nav-item navbar-brand">
+                <!-- Use the custom CSS class for the buttons -->
+                <button class="navbar-brand btn btn-link custom-button" aria-current="page" onclick="window.location.href='ppt2.html';">Presentation</button>
+            </li>
+            <li class="nav-item navbar-brand">
+                <!-- Use the custom CSS class for the buttons -->
+                <button class="navbar-brand btn btn-link custom-button" aria-current="page" onclick="window.location.href='information1.html';">Information</button>
+            </li>
+            <li class="nav-item navbar-brand">
+                <!-- Use the custom CSS class for the buttons -->
+                <button class="navbar-brand btn btn-link custom-button" aria-current="page" onclick="window.location.href='contact2.html';">Contact Us</button>
+            </li>
+        </ul>
+    </div>
+       <div class="dropdown">
+      <button class="btn btn-link custom10-button" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="/static/images/PROFILE ICON.png" alt="Profile" width="40" height="40">
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+        <li><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+        <li><a class="dropdown-item" href="myaccount.html">My Account</a></li>
+      </ul>
+    </div>
+</nav>
+
+    
+  <div class = "container">
+    <!--<div class="presentation-header">
+      <h1>Presentation</h1>
+    </div>-->
+    
+    <div class = "after-navabar">
+      <div class="main-container pt-2 my-5 text-center border-centre">
+        <h5 class="display-4 fw-bold text-body-emphasis">PRESENTATION</h5>
+      </div>
+      <div class="video-frame">
+      <video width="800" height="450" controls>
+        <source src="/static/Media/video ppt.mp4" type="video/mp4">
+        <source src="/static/Media/video ppt.mp4" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+      </div>
+      
+      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/static/images/1.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/images/2.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/images/3.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/images/4.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/images/5.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

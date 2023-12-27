@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./SIH MAIN CODES/python-backend/api/Css Files/profileButton.css">
+    <style>
+        /* Basic styling for the profile page */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- Profile button to toggle the sliding bar -->
+    <button id="toggleProfile" class="profile-button">
+        <i class="fas fa-user profile-icon"></i>
+    </button>
+
+    <!-- Sliding profile bar -->
+    <div id="profileBar" class="profile-bar">
+        <!-- Close button (X) to hide the profile bar -->
+        <span class="close-button" id="closeProfile">&times;</span>
+        <div class="profile-content">
+            <h2>Your Profile</h2>
+            <p>Your profile information goes here.</p>
+            <!-- Add more profile content as needed -->
+        </div>
+    </div>
+
+    <script src="./SIH MAIN CODES/python-backend/api/JavaScript files/ProfileButton.js"></script>
+</body>
+</html>

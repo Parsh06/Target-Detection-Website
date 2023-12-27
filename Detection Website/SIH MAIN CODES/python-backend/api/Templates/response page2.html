@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="../Css Files/Start.css"> -->
+    <style>
+        body {
+          background-image: url('/static/images/sundown-2-1380418.webp');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      align-items: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color:rgb(207, 202, 203);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .button {
+          min-width: 100px;
+    min-height: 40px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color:#202541 ;
+    background : #202541;
+  background: linear-gradient(180deg,white 0%, white  );
+    border: none;
+    border-radius: 10px;
+    /* box-shadow: 12px 12px 15px #202541; */
+    /* transition: all 0.3s ease-in-out 0s; */
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+        }
+        /* .button:hover, .button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  } */
+  
+  button:hover::before, button:focus::before {
+    opacity: 1;
+  }
+        .checked {
+      color: orange;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Your response has been submitted</h2>
+        <h2> Rating</h2>
+    <!-- Container for the star rating -->
+    <div id="starRating">
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+    </div>
+    <input type="hidden" id="ratingValue" value="0">
+
+        <!-- Container to display emojis -->
+        <div id="emojiContainer">
+        <span id="emoji"></span>
+        </div>
+        <br>
+        <div class="wrap">
+          <button class="button" href="index2.html" id="goToHomePage">Go to Home Page</button>
+        </div>
+    </div>
+   
+    
+    <script>
+        // JavaScript to handle the button click event
+        document.getElementById("goToHomePage").addEventListener("click", function() {
+            // Redirect to the home page URL (index2.html)
+            window.location.href = "index2.html"; // Replace with your actual home page URL if needed
+        });
+    // Get all star icons and the hidden input field
+  const stars = document.querySelectorAll(".fa-star");
+  const ratingInput = document.getElementById("ratingValue");
+  const emojiContainer = document.getElementById("emojiContainer");
+  const emoji = document.getElementById("emoji");
+
+  // Add click event listeners to each star
+  stars.forEach((star, index) => {
+    star.addEventListener("click", () => {
+      // Set the value of the hidden input field to the clicked star's index + 1
+      ratingInput.value = index + 1;
+
+      // Remove the 'checked' class from all stars
+      stars.forEach((s, i) => {
+        if (i <= index) {
+          s.classList.add("checked");
+        } else {
+          s.classList.remove("checked");
+        }
+      });
+
+      // Display emoji based on the rating
+      switch (index) {
+        case 0:
+          emoji.textContent = "😞"; // Sad emoji
+          break;
+        case 1:
+          emoji.textContent = "😐"; // OK emoji
+          break;
+        case 2:
+          emoji.textContent = "😊"; // Good emoji
+          break;
+        case 3:
+          emoji.textContent = "😄"; // Very good emoji
+          break;
+        case 4:
+          emoji.textContent = "😍"; // Excellent emoji
+          break;
+        default:
+          emoji.textContent = "";
+      }
+    });
+  });
+    </script>
+</body>
+</html>
+

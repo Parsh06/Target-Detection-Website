@@ -1,0 +1,41 @@
+.profile-bar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Start with the bar hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    transition: right 0.3s;
+}
+
+.profile-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Close button styles */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Profile icon styles */
+.profile-icon {
+    font-size: 30px;
+}
+
+/* Add your own styles for the profile content here */
+.profile-content {
+    padding: 20px;
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <style>
+    
+    body{
+      background-image: url('/static/images/sundown-2-1380418.webp');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .feature-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.75rem;
+}
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+
+  .content-container {
+  display: flex;
+  display: block;
+  justify-content: center;
+  align-content: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  /*background-color: white; /* Set the background color */
+  }
+  #header {
+  width: 50%;
+  margin-left: 25%;
+  border-radius: 10px;
+  background-color: #799ed3;
+  color: white; /* Set the font color */
+  padding: 10px;
+  }
+  #info-container {
+    text-align: left;
+  display: flex;
+  justify-content: left;
+  display: block;
+  width: 100%;
+  margin: 30px auto;
+  padding: 10px; /* Reduce padding to make the grey box smaller */
+  /*background-color: #808183;*/
+  color:  white;
+  border-radius: 10px;
+  }
+  #info-button {
+    min-width: 300px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background : #202541;
+  background: linear-gradient(180deg,white 0%, white);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 12px 12px 24px #202541;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+  }
+
+  .lead.mb-4 {
+    font-size: 27px;
+}
+
+p{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+}
+
+h2{
+  color:pink ;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: white;
+}
+
+.previous {
+  background-color:#202541;
+  color: white;
+}
+
+.next {
+  background-color: #202541;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+h1{
+  color: white;
+}
+.custom-button {
+            background-color:#202541; /* Set the background color to grey */
+            color: white; /* Set the text color to white */
+        }
+.gray-box {
+ /* background-color: #bcbdbf;*/
+  padding: 5px;
+  border-radius: 30px;
+  color: white;
+}
+/* #info-button:hover{
+background:#202541;
+color: pink;
+} */
+#profileDropdown{
+    top: 10px; /* Adjust the top position as needed */
+    left: 10000px; /* Adjust the left position as needed */
+    z-index: 1000; /* To ensure it's above other content */
+}
+
+.title-container {
+  border: 2px solid white; /* Add a white border */
+  border-radius: 10px; /* Rounded corners for the border */
+  padding: 10px; /* Add padding to the titles */
+  margin-bottom: 50px; /* Add space between the titles */
+}
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-black">
+    <div class="container-fluid">
+        <!-- Use the custom CSS class for the buttons -->
+        <button class="navbar-brand btn btn-link custom-button" onclick="window.location.href='index2.html';">Home</button>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item navbar-brand">
+                <!-- Use the custom CSS class for the buttons -->
+                <button class="navbar-brand btn btn-link custom-button" aria-current="page" onclick="window.location.href='detection2.html';">Detection</button>
+            </li>
+            <li class="nav-item navbar-brand">
+                <!-- Use the custom CSS class for the buttons -->
+                <button class="navbar-brand btn btn-link custom-button" aria-current="page" onclick="window.location.href='ppt2.html';">Presentation</button>
+            </li>
+            <li class="nav-item navbar-brand">
+                <!-- Use the custom CSS class for the buttons -->
+                <button class="navbar-brand btn btn-link custom-button" aria-current="page" onclick="window.location.href='information1.html';">Information</button>
+            </li>
+            <li class="nav-item navbar-brand">
+                <!-- Use the custom CSS class for the buttons -->
+                <button class="navbar-brand btn btn-link custom-button" aria-current="page" onclick="window.location.href='contact2.html';">Contact Us</button>
+            </li>
+        </ul>
+    </div>
+       <div class="dropdown">
+      <button class="btn btn-link custom10-button" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="/static/images/PROFILE ICON.png" alt="Profile" width="40" height="40">
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+        <li><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+        <li><a class="dropdown-item" href="myaccount.html">My Account</a></li>
+      </ul>
+    </div>
+</nav>
+   
+    <div class = "content-container">
+      <div class = "after-navabar">
+        <div class="main-container pt-5 my-5 text-center border-bottom">
+          <h1 class="display-4 fw-bold " style="color: white;">Why Robust Human Target Detection ?</h1>
+
+          <div class="col-lg-6 mx-auto">
+            <div class="gray-box">
+              <p class="lead mb-3">In today's world, where security and surveillance have become increasingly important,
+                it is crucial to have accurate and reliable
+                methods for detecting and tracking human targets.</p>
+            </div>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+              <button id="info-button" onclick="toggleInfo()" type="button" class="btn btn-primary btn-lg px-5 me-sm-3" onclick="window.location.href='./detection.html';">
+                Information</button>
+            </div>
+          </div>
+        </div>
+    
+    
+    <div id="info-container">
+      <div class="title-container" id="title-1">
+        <h2><i><b>Application Areas</b></i></h2>
+        <p>
+          Our cutting-edge technology for robust human target detection is deployed in various critical defense and security scenarios. Some key application areas include:
+      </p>
+      <ul>
+          <p><u>Border-Security</u></b>: Ensuring the integrity of national borders by detecting and monitoring human activity near border regions.</p>
+          <p><b><u>Perimeter-Protection</u></b></b>: Securing military installations, bases, and high-value assets by detecting unauthorized intrusions.</p>
+          <p><b><u>Surveillance</u></b>: Providing real-time surveillance capabilities for monitoring and responding to potential threats in sensitive areas.</p>
+          <p><b><u>Urban-Warfare</u></b>: Supporting urban warfare operations by identifying human targets in complex environments.</p>
+      </ul>
+      <p>
+          Our technology is specifically designed to detect various human activities, including crawling, running, and jumping, in real-time. These capabilities enable us to provide enhanced situational awareness and rapid response to potential threats.
+      </p>
+      </div>
+      <div>
+       
+      </div> 
+      <div class="title-container" id="title-2">
+        
+        <h2><b><i>Activity Detection</i></b></h2>
+        <p>
+          <b><u>Crawling Detection</u></b>: Our system can identify individuals who are crawling, which can be useful in scenarios where stealth and covert movement are important.
+      </p>
+      <p>
+        <b><u>Running Detection</u></b>: We can quickly spot individuals engaged in running, allowing for the immediate response to fast-moving targets.
+      </p>
+      <p>
+          <b><u>Jumping Detection</u></b>: Detection of jumping activities helps in identifying potential threats attempting to breach obstacles or boundaries.
+      </p>
+      <p>
+          In today's dynamic security landscape, the ability to detect and respond to such activities is of paramount importance.
+      </p>
+      </div> 
+      <div>
+       
+      </div> 
+    </div>
+    </div>
+    <a href="information1.html" class="previous">&laquo; Previous</a>
+    <a href="information2.html" class="next">Next &raquo;</a>
+  </div>
+    
+  <script>
+    function toggleInfo() {
+        var infoContainer = document.getElementById("info-container");
+        if (infoContainer.style.display === "none" || infoContainer.style.display === "") {
+            infoContainer.style.display = "block";
+            infoContainer.style.display = "#bcbdbf";
+        } else {
+            infoContainer.style.display = "none";
+            infoContainer.style.display = "#bcbdbf";
+        }
+    }
+</script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+
+</html>
